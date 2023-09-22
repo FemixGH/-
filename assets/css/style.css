@@ -364,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
 .ticker__item {
     display: inline-block;
     padding: 0 2rem;
-    margin-right: 1rem; /* Add margin-right to create spacing between elements */
+    margin-right: 1rem;
     font-size: 2rem;
     color: black;
 }
