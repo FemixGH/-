@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
     font-weight: 700;
     color: #FFA31A;
+
 }
 /* Navigation */
 .nav{
@@ -237,14 +238,5 @@ h1, h2, h3, h4, h5, h6 {
 .section__text{
     font-size: 15px;
     color: #999;
-
 }
-
-
-
-
-
-
-
-
 
