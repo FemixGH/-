@@ -22,22 +22,75 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+    z-index: 5;
 }
 
-/* Intro */
+/* Intro and slider*/
 .intro {
     display: flex;
     flex-direction: column;
     justify-content:center;
     width: 100%;
     height: 100vh;
-    background: url("../images/another.jpg")
-    center no-repeat;
+    position: relative;
     background-size: cover;
     border-bottom: 7px solid #FFA31A;
 
+}
+
+.intro ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide{
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    transition: 300ms opacity ease-in-out;
+}
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel__button{
+    position: absolute;
+
+    height: 0;
+    z-index: 101;
+    font-size: 4rem;
+    border: none;
+    top: 50%;
+    color: #FFA31A;
+    cursor: pointer;
+    border-radius: .5rem;
+    padding: 0 .5rem;
+    background: #FFA31A none;
+}
+
+.carousel__button:hover{
+    transition: background .1s linear, color .15s linear;
+    color: #fce38a;
+    background-color: #FFA31A;
+}
+.carousel__button.next{
+    right: 1rem;
 
 }
+.carousel__button.prev{
+    left: 1rem;
+}
+
 
 .intro__title{
     font-size: 120px;
@@ -46,6 +99,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFA31A;
     line-height: 1;
 }
+
+
 .intro__title:after{
     content: "";
     display: block;
@@ -55,6 +110,8 @@ h1, h2, h3, h4, h5, h6 {
 
     background-color: #FFA31A;
 }
+
+
 
 .intro__inner{
     width: 100%;
@@ -72,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     z-index: 1000;
+
 
 }
 
@@ -295,7 +353,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo__img {
-    width: 200px;
+    width: 100px;
+    height: 100px;
     margin-left: 60px;
 }
 
@@ -413,4 +472,62 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(-100%);
         visibility: visible;
     }
+}
+
+.footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+}
+
+.footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color: rgb(128, 128, 128);
+    font-size:0.8em;
+}
+
+.footer .row a{
+    text-decoration:none;
+    color: rgb(128, 128, 128);
+    transition:0.5s;
+}
+
+.footer .row a:hover{
+    color:#fff;
+}
+
+.footer .row ul{
+    width:100%;
+}
+
+.footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+}
+
+.footer .row a i{
+    font-size:2em;
+    margin:0 1%;
+}
+
+@media (max-width:720px){
+    .footer{
+        text-align:left;
+        padding:5%;
+    }
+    .footer .row ul li{
+        display:block;
+        margin:10px 0;
+        text-align:left;
+    }
+    .footer .row a i{
+        margin:0% 3%;
+    }
+}
+
+.footer .row a {
+    margin-right: 10px; /* Отступ справа между ссылками */
 }
