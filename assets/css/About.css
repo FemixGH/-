@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #FFA31A;
+    background-color: black;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+
+.image__container {
+    flex: 1;
+    margin: auto; /* Центрируем контейнер с изображениями */
+}
+
+.text__container {
+    text-align: left; /* Центрируем текст для мобильных устройств */
+    padding: 20px; /* Добавим внутренние отступы для текста */
+    margin-bottom: 50px; /* Уменьшаем отступ вниз для компактного отображения на мобильных устройствах */
+}
+.sub__container {
+    padding-top: 200px;
+}
+
+.image-block {
+    width: 500px;
+    height: 100%;
+}
+
+.image-block.bg-image {
+
+}
+
+.image__container {
+    display: flex;
+    flex-direction: column; /* Это свойство устанавливает направление внутри flex-контейнера на вертикальное (сверху вниз) */
+    flex: 1;
+    margin: auto 80px;
+}
+
+.image-block.bg-image2 {
+    margin-left: 20px;
+}
+
+.image__container img {
+    margin-bottom: 70px; /* Задайте нужное значение отступов между картинками */
+}
+
+
+.sub__container {
+    display: flex;
+    align-items: center;
+}
+
+
+.text__container {
+    flex: 1;
+    padding: 0 20px; /* Добавьте отступы, если необходимо */
+}
+
+.text__container {
+    color: #FFA31A;
+    font-size: 25px;
+}
+
+.text-blk.section-head {
+    font-size: 35px; /* Задайте нужное значение размера шрифта */
+}
+
+
+@media (max-width: 767px) {
+    .sub__container{
+        align-items: center; /* Центрируем элементы по горизонтали */
+        flex-direction: column-reverse;
+    }
+
+    .image-block {
+        width: 300px;
+        height: 100%;
+    }
+
+}
+
+
+

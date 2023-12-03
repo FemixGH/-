@@ -485,13 +485,13 @@ h1, h2, h3, h4, h5, h6 {
     width:100%;
     margin:1% 0%;
     padding:0.6% 0%;
-    color: rgb(128, 128, 128);
+    color: #FFA31A;
     font-size:0.8em;
 }
 
 .footer .row a{
     text-decoration:none;
-    color: rgb(128, 128, 128);
+    color: #FFA31A;
     transition:0.5s;
 }
 

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap"
           rel="stylesheet">
     <meta charset="UTF-8">
+    <script defer src="assets/js/app.js"></script>
     <title>Кино злодеи</title>
 </head>
 <body>
@@ -45,7 +46,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a class="nav__link" href="#">
+                        <a class="nav__link" href="About.html">
                             О нас
                         </a>
                     </li>
@@ -58,6 +59,42 @@
 </header>
 
 <div class="intro">
+
+    <button class="carousel__button next" onclick="onNext();">&#187</button>
+    <button class="carousel__button prev" onclick="onPrev();">&#171</button>
+
+    <ul class="slides">
+
+
+        <li class="slide" data-active>
+            <img src="assets/images/remember.jpg" alt="picture 1">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/shindler.jpg" alt="picture 2">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/american.jpg" alt="picture 3">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/totoro.jpg" alt="picture 4">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/psixo.png" alt="picture 5">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/another.jpg" alt="picture 6">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/br.jpeg" alt="picture 7">
+        </li>
+
+    </ul>
     <div class="container">
         <div class="intro__inner">
             <h1 class="intro__title">Топ кино злодеев</h1>
