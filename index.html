@@ -1,193 +1,182 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <title>Главная страница</title>
-    <link rel = "icon" type = "images/x-icon" href ="favicon/8.ico">
+    <link rel="shortcut icon" href="assets/favicon/icons8-хлопушка-для-кино-50.png"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/MainPage.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <title>Киногерои</title>
+
+    <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-<!--Создаём таблицу контейнер, которой задаём следующее
-оформление:
-border="1" - рамка вокруг контейнера. Увеличив число, можно увеличить толщину рамки.
-align="center" - размещаем контейнер по центру экрана.
-rules="rows" - убираем двойную рамку.
-style="width:60%;" - добавляем стилевое свойства, делающее
-контейнер и весь сайт "резиновым".
-Сделать полноценный адаптивный дизайн, этим способом невозможно.-->
-<table
-        border="1"
-        align="center"
-        rules="rows"
-        style="width:60%;">
-    <!--Создаём строку-->
-    <tr>
-        <!--Создаём ячейку строки-->
-        <td>
-            <!--ШАПКА САЙТА-->
 
-            <!--В ячейке строки создаём ещё одну таблицу для шапки сайта.
-            Оформление:
-            border="1" - двойная рамка толщиной в 1px
-            background="images/168.png" - картинка в шапке сайта, если требуется.
-            Адрес картинки вы должны вставить свой.
-            bgcolor="#7FFFD4" - фоновый цвет в шапке, если нет картинки.
-            cellpadding="10" - отступ содержимого от рамки не менее 10px.
-            style="width:100%; border-radius:5px;" - добавляем "резиновость"
-            и закругляем уголки рамки-->
-            <table
-                    border="1"
-                    background="assets/images/another.jpg"
-                    bgcolor="#7FFFD4"
-                    cellpadding="10"
-                    style="width:100%; border-radius:5px;">
-                <!--Создаём строку таблицы-->
-                <tr>
-                    <!--Создаём столбец таблицы-->
-                    <th>
-                        <!--Содержание ячейки столбца-->
-                        <h1>Бойцовский клуб</h1>
-                        <h3>Никому не рассказывай, что видел этот сайт.</h3>
-                        <!--Закрываем таблицу-->
-                    </th>
-                </tr>
-            </table>
 
-            <!--ОСНОВНОЙ КОНТЕНТ-->
+<header class="header">
+    <div class="container header__container">
+        <a href="#" class="logo">
+            <img class="logo__img" src="assets/images/206950%201.png" alt="Логотип">
+        </a>
 
-            <!--В этой же ячейке контейнера создаём ещё одну таблицу
-            для основного контента.
-            Оформление как и в предыдущей таблице-->
+        <button class="header__burger-btn" id="burger">
+            <span></span><span></span><span></span>
+        </button>
 
-            <table
-                    border="1"
-                    bgcolor="#e6e6fa"
-                    cellpadding="10"
-                    style="width:100%; border-radius:5px;">
-                <!--Создаём строку-->
-                <tr>
-                    <!--Создаём ячейку
-                    Оформление:
-                    rowspan="2" - объединяем две ячейки в одну.
-                    Число объединяемых ячеек по числу ячеек в сайдбаре.
-                    style="width:80%" - основной контент занимает 80% всей площади,
-                    оставшиеся 20% для сайдбара-->
-                    <td
-                            rowspan="2"
-                            style="width:80%">
-                        <h2 id="title1">Страница</h2>
-                        <!--Начинаем абзац с красной строки-->
-                        <p style="text-indent:20px">
-                            Вещи, которыми ты владеешь, в конце концов овладевают тобой.</p>
+        <nav class="menu" id="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a class="nav__link" href="index.html">
+                        Главная страница
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="nav__link" href="Heroes.html">
+                        Топ героев
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="nav__link" href="Villains.html">
+                        Топ злодеев
+                    </a>
+                </li>
 
-                        <p style="text-indent:20px">Почему я решил его сделать?
-                            Ты хотел изменить свою жизнь, но не мог этого сделать сам.
-                            Я — то, кем ты хотел бы быть. Я выгляжу так, как ты мечтаешь выглядеть.
-                            Я трахаюсь так, как ты мечтаешь трахаться.
-                            Я умён, талантлив и, самое главное, свободен от всего, что сковывает тебя.</p>
-                        <!--Закрываем ячейку-->
-                    </td>
 
-                    <figure> <!--Изображение-карта с тремя областями ссылками-->
-                        <img src="https://sun6-20.userapi.com/impg/3qTOdn27me2FYISaeyd_Jjd5qFfTW0GE8_v9pA/koqZgmhQ7Mo.jpg?size=720x720&quality=95&sign=48e8fb7e19d604ca569009942ff5b88d&c_uniq_tag=MfjrI2k0V9v5A5QEcU2rOQoG2xVWnYTSGmhScqZfuDs&type=album" alt="Сладости" width = 1000 height="465" usemap="#shapes">
-                        <map name="shapes">
-                            <area shape="rect" coords="239,139,537,464" href="https://ru.wikipedia.org/wiki/Шоколад" alt="Шоколад">
-                            <area shape="poly" coords="454,1,790,1,852,398,999,287,999,463,771,463,678,305" href="https://ru.wikipedia.org/wiki/Мармелад" alt="Мармелад">
-                            <area shape="poly" coords="359,1,1,375,1,1" href="https://ru.wikipedia.org/wiki/Леденец" alt="Леденцы">
+                <li class="menu__item">
+                    <a class="nav__link" href="About.html">
+                        О нас
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-                        </map>
-                        <figcaption>Выбор сладостей</figcaption> <!--Текст под изображением-->
-                    </figure>
+    </div>
+</header>
 
-                    <!--САЙДБАР-->
 
-                    <!--Создаём ячейку сайдбара-->
-                    <td bgcolor="#e6e6fa">
-                        <h3 id="title2">Лучшие цитаты</h3>
+<div class="intro">
+    <button class="carousel__button next" onclick="onNext();">&#187</button>
+    <button class="carousel__button prev" onclick="onPrev();">&#171</button>
 
-                        <!--Абзац для ссылки на страницу сайта-->
-                        <p>
-                            <!--Ссылка на страницу сайта-->
+    <ul class="slides">
 
-                            <a href="">
-                                <!--Картинка маркера перед названием страницы-->
-                                <img src="https://cpacheck.ru/wp-content/uploads/krutye-citaty-iz-bojcovskogo-kluba8.jpg">
-                                <!--Название страницы
-                                style="margin-left:5px;" - отступ названия от маркера-->
-                                <span style="margin-left:5px;">Страница</span></a>
 
-                            <!--Закрываем абзац-->
-                        </p>
-                        <p>
-                            <a href="">
-                                <img src="https://cpacheck.ru/wp-content/uploads/krutye-citaty-iz-bojcovskogo-kluba12.jpg">
-                                <span style="margin-left:5px;">Страница </span></a>
-                        </p>
-                        <p>
-                            <a href="">
-                                <img src="https://r1.mt.ru/r3/photoDF4A/20459485733-0/png/bp.webp">
-                                <span style="margin-left:5px;">Страница </span></a>
-                        </p>
-                        <p>
-                            <a
-                                    href="http://mmm-mavrodi.com"><img src="image/fight-club-brad-pitt.gif" width="244" height="186" alt="Пример">
-                            </a>
-                        </p>
-                        <p><a name="top"></a></p>
-                        <p>...</p>
-                        <p><a href="#top">Наверх</a></p>
-                        <!--Закрываем строку Меню-->
-                    </td>
-                </tr>
-                <!--Создаём строку с дополнительной информацией-->
-                <tr>
-                    <!--Ячейка с дополнительной информацией-->
-                    <td
-                            bgcolor="#e6e6fa"
-                            align="center">
-                        <h3>РЕКЛАМА</h3>
-                        <p>
-                            Познакомился я с Тайлером в
-                            <a
-                                    href = "https://www.aviasales.ru/?params=MOW1"
-                                title = "Самый лучший быстрый и дешёвый поисковик авиабилетов"
-                               > самолёте</a>.
-                        </p>
-                        <!--Закрываем ячейку с общей информацией
-                        и таблицу основного контента-->
-                    </td>
-                </tr>
-            </table>
+        <li class="slide" data-active>
+            <img src="assets/images/remember.jpg" alt="picture 1">
+        </li>
 
-            <!--нижняя часть-->
-            <table
-                    border="1"
-                    bgcolor="#7FFFD4"
-                    height="100"
-                    cellpadding="10"
-                    style="width:100%; border-radius:5px;">
-                <!--Создаём строку.-->
-                <tr>
-                    <!--Создаём столбец-->
-                    <th>
-                        <h3>Лишь утратив всё до конца, мы обретаем свободу</h3>
-                        <!--Закрываем таблицу-->
-                    </th>
-                </tr>
-            </table>
-            <!--Закрываем таблицу контейнера-->
+        <li class="slide">
+            <img src="assets/images/shindler.jpg" alt="picture 2">
+        </li>
 
-        </td>
-    </tr>
-</table>
+        <li class="slide">
+            <img src="assets/images/american.jpg" alt="picture 3">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/totoro.jpg" alt="picture 4">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/psixo.png" alt="picture 5">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/another.jpg" alt="picture 6">
+        </li>
+
+        <li class="slide">
+            <img src="assets/images/br.jpeg" alt="picture 7">
+        </li>
+
+    </ul>
+
+    <div class="container">
+        <div class="intro__inner">
+            <h1 class="intro__title">Киногерои нашего времени</h1>
+            <a href="About.html" class="btn">Узнать больше </a>
+        </div>
+    </div>
+
+
+</div>
+
+
+<section class="section">
+    <div class="main__container">
+        <div class="section__header">
+            <h2 class="section__subtitle">Киногерои</h2>
+            <div class="section__text">
+                <p> Киногерои — персонажи из фильмов, чьи похождения и приключения увлекают зрителей по всему миру.
+                    Некоторые из них стали настоящими символами киноиндустрии и культурными иконами. Фанфакт: одной из
+                    самых популярных киногероинь считается принцесса Лея из франшизы "Звездные войны", а Индиана Джонс
+                    считается самым популярным киногероем.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="ticker__wrap">
+    <div class="ticker">
+        <div class="ticker__item">Голливуд был создан Харви Уилкоксом, известным борцом за трезвость и сторонником
+            запрета спиртных напитков. Он и его жена хотели, чтобы будущий город был сообществом, основанным на
+            религиозных
+            принципах и принципах трезвости. Они предоставляли бесплатную землю всем, кто хочет построить церковь
+        </div>
+        <div class="ticker__item">Для фильма «Унесенные ветром» было снято 152 километра пленки. Их отредактировали до 6
+            километров
+        </div>
+        <div class="ticker__item">Режиссер фильма «Реквием по мечте» Даррен Аронофски попросил Джареда Лето и Марлона
+            Уэйанса воздержаться на месяц от секса и сахара, чтобы лучше понять свои роли
+        </div>
+        <div class="ticker__item">Первым фильмом, в котором показали слив воды в унитазе, был «Психо» Альфреда
+            Хичкока
+        </div>
+        <div class="ticker__item">
+            Самый длинный фильм в мире – "Дау. Жорж" продолжительностью около 13 часов. Снят он был в 2020 году
+            режиссером Ильей Хржановским. В свою очередь, самый короткий фильм, "Фреска" (1979), длится всего 1 секунду
+        </div>
+
+
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer">
+        <div class="row">
+            <a href="https://vk.com/mirea_official"><img src="assets/images/VK_Compact_Logo.svg.png" alt="vk" width="40"
+                                                         height="40"></a>
+
+
+            <a href="https://www.instagram.com/rtu_university_official/?hl=ru"><img
+                    src="assets/images/Instagram-Glyph-Color-Logo.wine.svg" alt="instagram" width="45"
+                    height="45"></a>
+
+            <a href="https://ok.ru/rtumirea"><img
+                    src="assets/images/Odnoklassniki.svg.png" alt="ok" width="40"
+                    height="40"></a>
+
+            <a href="https://www.youtube.com/channel/UClVZx_AWcLq8cXViG9NSXAA"><img
+                    src="assets/images/Youtube_logo.png" alt="youtube" width="55"
+                    height="37"></a>
+
+
+        </div>
+
+
+        <div class="row">
+            <a href="Me.html">Was produced by Abanin Theodor. Student of IKBO-13-22</a>
+        </div>
+    </div>
+</footer>
+
 </body>
-
-
-<!--Ссылки якоря на заголовки и подзаголовки страницы-->
-<a href="#title1"><strong>Нажмите для перехода 1</strong></a> </br>
-<a href="#title2"><strong>Нажмите для перехода 2</strong></a> </br>
-
-
-
-
-
 </html>
