@@ -523,3 +523,11 @@ h1, h2, h3, h4, h5, h6 {
 .footer .row a {
     margin-right: 10px; /* Отступ справа между ссылками */
 }
+
+
+
+@media (max-width: 1500px) {
+    .nav__link{
+        font-size: 18px;
+    }
+}
