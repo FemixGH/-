@@ -300,6 +300,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100px;
     height: 100px;
     margin-left: 60px;
+    margin-top: 30px;
 }
 
 .header__burger-btn {
@@ -318,12 +319,14 @@ h1, h2, h3, h4, h5, h6 {
 .header__burger-btn span {
     display: block;
     position: absolute;
-    width: 30px;
-    height: 3px;
-    left: 5px;
+    width: 50px;
+    height: 5px;
+    /*left: 5px;*/
     background-color: #FFA31A;
     transition: background-color .3s, opacity .3s, transform .5s;
     will-change: transform;
+    right: 30px;
+
 }
 
 .header__burger-btn:hover span {
@@ -513,6 +516,7 @@ h1, h2, h3, h4, h5, h6 {
         display: block;
         margin: 10px 0;
         text-align: left;
+
     }
 
     .footer .row a i {
