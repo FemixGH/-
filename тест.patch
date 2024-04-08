@@ -1,0 +1,19 @@
+Subject: [PATCH] тест
+---
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision ad0aa15a2ec7ac41135d0b06ad8b607c2f518db0)
++++ b/index.html	(revision 3428478693e416fc80b7c4f20c8d0cc5a95774b7)
+@@ -32,7 +32,7 @@
+             <ul class="menu__list">
+                 <li class="menu__item">
+                     <a class="nav__link" href="index.html">
+-                        Главная страница
++                        Main page
+                     </a>
+                 </li>
+                 <li class="menu__item">
